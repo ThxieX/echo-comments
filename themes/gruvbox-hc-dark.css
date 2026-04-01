@@ -1,243 +1,94 @@
-/*! Giscus Theme: Gruvbox High Contrast Dark - Seamless Integration */
+/*! Giscus Theme: Gruvbox High Contrast Dark */
 
-/* === CSS Variables === */
 main {
+  --color-prettylights-syntax-comment: #928374;
+  --color-prettylights-syntax-constant: #d3869b;
+  --color-prettylights-syntax-entity: #8ec07c;
+  --color-prettylights-syntax-storage-modifier-import: #fbf1c7;
+  --color-prettylights-syntax-entity-tag: #b8bb26;
+  --color-prettylights-syntax-keyword: #fb4934;
+  --color-prettylights-syntax-string: #b8bb26;
+  --color-prettylights-syntax-variable: #fe8019;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #fb4934;
+  --color-prettylights-syntax-invalid-illegal-text: #fbf1c7;
+  --color-prettylights-syntax-invalid-illegal-bg: #9d0006;
+  --color-prettylights-syntax-carriage-return-text: #fbf1c7;
+  --color-prettylights-syntax-carriage-return-bg: #cc241d;
+  --color-prettylights-syntax-string-regexp: #b8bb26;
+  --color-prettylights-syntax-markup-list: #fabd2f;
+  --color-prettylights-syntax-markup-heading: #83a598;
+  --color-prettylights-syntax-markup-italic: #fbf1c7;
+  --color-prettylights-syntax-markup-bold: #fbf1c7;
+  --color-prettylights-syntax-markup-deleted-text: #fb4934;
+  --color-prettylights-syntax-markup-deleted-bg: #462726;
+  --color-prettylights-syntax-markup-inserted-text: #b8bb26;
+  --color-prettylights-syntax-markup-inserted-bg: #3d4220;
+  --color-prettylights-syntax-markup-changed-text: #fe8019;
+  --color-prettylights-syntax-markup-changed-bg: #4a3223;
+  --color-prettylights-syntax-markup-ignored-text: #fbf1c7;
+  --color-prettylights-syntax-markup-ignored-bg: #076678;
+  --color-prettylights-syntax-meta-diff-range: #d3869b;
+  --color-prettylights-syntax-brackethighlighter-angle: #928374;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #665c54;
+  --color-prettylights-syntax-constant-other-reference-link: #83a598;
+  --color-btn-text: #ebdbb2;
+  --color-btn-bg: #3c3836;
+  --color-btn-border: rgba(251, 241, 199, 0.1);
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: #504945;
+  --color-btn-hover-border: #665c54;
+  --color-btn-active-bg: #504945;
+  --color-btn-active-border: #665c54;
+  --color-btn-selected-bg: #1d2021;
+  --color-btn-primary-text: #1d2021;
+  --color-btn-primary-bg: #fe8019;
+  --color-btn-primary-border: rgba(251, 241, 199, 0.1);
+  --color-btn-primary-shadow: 0 0 transparent;
+  --color-btn-primary-inset-shadow: 0 0 transparent;
+  --color-btn-primary-hover-bg: #d65d0e;
+  --color-btn-primary-hover-border: rgba(251, 241, 199, 0.1);
+  --color-btn-primary-selected-bg: #fe8019;
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text: rgba(251, 241, 199, 0.5);
+  --color-btn-primary-disabled-bg: rgba(254, 128, 25, 0.6);
+  --color-btn-primary-disabled-border: rgba(251, 241, 199, 0.1);
+  --color-action-list-item-default-hover-bg: rgba(189, 174, 147, 0.12);
+  --color-segmented-control-bg: rgba(102, 92, 84, 0.1);
+  --color-segmented-control-button-bg: #1d2021;
+  --color-segmented-control-button-selected-border: #665c54;
+  --color-fg-default: #fbf1c7;
+  --color-fg-muted: #a89984;
+  --color-fg-subtle: #928374;
   --color-canvas-default: #1d2021;
   --color-canvas-overlay: #1d2021;
   --color-canvas-inset: #1d2021;
   --color-canvas-subtle: #282828;
   --color-border-default: #504945;
   --color-border-muted: #3c3836;
+  --color-neutral-muted: rgba(189, 174, 147, 0.4);
   --color-accent-fg: #fe8019;
-  --color-accent-emphasis: #fe8019;
-  --color-fg-default: #fbf1c7;
-  --color-fg-muted: #bdae93;
-  --color-fg-subtle: #a89984;
-  color-scheme: dark;
+  --color-accent-emphasis: #d65d0e;
+  --color-accent-muted: rgba(254, 128, 25, 0.4);
+  --color-accent-subtle: rgba(254, 128, 25, 0.1);
+  --color-success-fg: #b8bb26;
+  --color-attention-fg: #fabd2f;
+  --color-attention-muted: rgba(250, 189, 47, 0.4);
+  --color-attention-subtle: rgba(250, 189, 47, 0.15);
+  --color-danger-fg: #fb4934;
+  --color-danger-muted: rgba(251, 73, 52, 0.4);
+  --color-danger-subtle: rgba(251, 73, 52, 0.1);
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: #3c3836;
+  --color-scale-blue-8: #076678;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
 
-/* === Base Text Color === */
-main,
-main .gsc-main,
-main p,
-main span,
-main div,
-main li,
-main strong,
-main em {
-  color: #fbf1c7;
+main .pagination-loader-container {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
 }
 
-/* === Muted Text (timestamps, metadata) === */
-main .gsc-comment-author-avatar + div > a:not(:first-child),
-main .gsc-comment-header > div > span,
-main .gsc-comment-header .Link--secondary,
-main .gsc-reply-author-avatar + div > a:not(:first-child),
-main .color-fg-muted,
-main .text-sm,
-main .f6,
-main time,
-main relative-time {
-  color: #a89984 !important;
-}
-
-/* === Author Name (PRIMARY color) === */
-main .gsc-comment-author > a,
-main .gsc-comment-header > div > a:first-child,
-main a.author,
-main .author {
-  color: #fe8019 !important;
-}
-
-main .gsc-comment-author > a:hover,
-main .gsc-comment-header > div > a:first-child:hover,
-main a.author:hover {
-  color: #fabd2f !important;
-}
-
-/* === Owner/Label Badge === */
-main .Label,
-main .gsc-comment-header .Label {
-  color: #bdae93 !important;
-  border-color: #504945 !important;
-  background-color: transparent !important;
-}
-
-/* === Comment Content === */
-main .gsc-comment-content,
-main .gsc-comment-content p,
-main .gsc-comment-content li,
-main .gsc-comment-content ul,
-main .gsc-comment-content ol {
-  color: #fbf1c7;
-}
-
-main .gsc-comment-content h1,
-main .gsc-comment-content h2,
-main .gsc-comment-content h3,
-main .gsc-comment-content h4,
-main .gsc-comment-content h5,
-main .gsc-comment-content h6 {
-  color: #fbf1c7;
-}
-
-main .gsc-comment-content a {
-  color: #fe8019;
-}
-
-main .gsc-comment-content a:hover {
-  color: #fabd2f;
-}
-
-main .gsc-comment-content pre {
-  background-color: #1d2021;
-  border-color: #504945;
-}
-
-main .gsc-comment-content code {
-  background-color: #282828;
-  color: #fbf1c7;
-}
-
-main .gsc-comment-content blockquote {
-  border-left-color: #fe8019;
-  color: #bdae93;
-}
-
-/* === Comment Box === */
-main .gsc-comment-box {
-  background-color: #282828;
-  border-color: #504945;
-  border-radius: 8px;
-}
-
-main .gsc-comment-box-tabs {
-  background-color: #3c3836;
-  border-color: #504945;
-}
-
-main .gsc-comment-box-textarea {
-  background-color: #1d2021;
-  border-color: #504945;
-  color: #fbf1c7;
-}
-
-main .gsc-comment-box-textarea::placeholder {
-  color: #a89984;
-}
-
-main .gsc-comment-box-textarea:focus {
-  border-color: #fe8019;
-  box-shadow: 0 0 0 2px rgba(254, 128, 25, 0.15);
-}
-
-main .gsc-comment-box-bottom {
-  background-color: #282828;
-  border-color: #504945;
-}
-
-/* === Comments === */
-main .gsc-comment {
-  background-color: transparent;
-  border-color: #504945;
-}
-
-/* === Reactions === */
-main .gsc-reactions {
-  background-color: transparent;
-}
-
-main .gsc-reactions-button {
-  background-color: #3c3836;
-  border-color: #504945;
-  color: #ebdbb2;
-}
-
-main .gsc-reactions-button:hover {
-  background-color: #504945;
-}
-
-main .gsc-social-reaction-summary-item {
-  background-color: #3c3836;
-  border-color: #504945;
-  color: #ebdbb2;
-}
-
-main .gsc-social-reaction-summary-item:hover {
-  background-color: #504945;
-}
-
-main .gsc-social-reaction-summary-item.has-reacted {
-  background-color: rgba(254, 128, 25, 0.15);
-  border-color: #fe8019;
-  color: #fe8019;
-}
-
-main .gsc-reactions-popover {
-  background-color: #282828;
-  border-color: #504945;
-}
-
-/* === Reply === */
-main .gsc-reply-box {
-  background-color: #282828;
-  border-color: #504945;
-}
-
-main .gsc-replies-count,
-main .gsc-comment-replies-count {
-  color: #a89984;
-}
-
-/* === Header === */
-main .gsc-header {
-  border-bottom-color: #504945;
-}
-
-main .gsc-header .gsc-left-header em {
-  color: #a89984;
-}
-
-main .gsc-header .gsc-left-header a {
-  color: #fbf1c7;
-}
-
-main .gsc-header .gsc-left-header a:hover {
-  color: #fe8019;
-}
-
-main .gsc-header .BtnGroup-item {
-  background-color: #3c3836;
-  border-color: #504945;
-  color: #ebdbb2;
-}
-
-main .gsc-header .BtnGroup-item:hover {
-  background-color: #504945;
-}
-
-main .gsc-header .BtnGroup-item[aria-selected="true"] {
-  background-color: #504945;
-  color: #fbf1c7;
-}
-
-/* === Timeline === */
-main .gsc-timeline {
-  border-left-color: #504945;
-}
-
-/* === Login Button === */
-main .gsc-login-button {
-  background-color: #3c3836;
-  border-color: #504945;
-  color: #fbf1c7;
-}
-
-main .gsc-login-button:hover {
-  background-color: #504945;
-}
-
-/* === Loading === */
 main .gsc-loading-image {
-  filter: invert(1);
+  background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
 }
