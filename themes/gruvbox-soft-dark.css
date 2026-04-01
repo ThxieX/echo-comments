@@ -1,4 +1,6 @@
 /*! Giscus Theme: Gruvbox Soft Dark - Seamless Integration */
+
+/* === CSS Variables === */
 main {
   --color-canvas-default: #32302f;
   --color-canvas-overlay: #32302f;
@@ -15,28 +17,234 @@ main {
   --color-attention-fg: #d79921;
   --color-danger-fg: #cc241d;
   --color-fg-default: #d5c4a1;
-  --color-fg-muted: #928374;
-  --color-fg-subtle: #7c6f64;
+  --color-fg-muted: #a89984;
+  --color-fg-subtle: #928374;
   --color-primer-fg-disabled: #665c54;
   color-scheme: dark;
 }
-main, main .gsc-main { color: #d5c4a1; }
-main .gsc-comment-box { background-color: #3c3836; border-color: #504945; border-radius: 8px; }
-main .gsc-comment-box-tabs { background-color: #504945; border-color: #504945; }
-main .gsc-comment-box-textarea { background-color: #32302f; border-color: #504945; color: #d5c4a1; }
-main .gsc-comment-box-textarea:focus { border-color: #d65d0e; box-shadow: 0 0 0 2px rgba(214, 93, 14, 0.15); }
-main .gsc-comment { background-color: transparent; border-color: #504945; }
-main .gsc-comment-content, main .gsc-comment-content p, main .gsc-comment-content li { color: #d5c4a1; }
-main .gsc-comment-author, main .gsc-comment-author a, main a.gsc-comment-author-link { color: #d65d0e; }
-main .gsc-comment-author a:hover, main a.gsc-comment-author-link:hover { color: #d79921; }
-main .gsc-reactions { background-color: transparent; }
-main .gsc-reactions-button { background-color: #504945; border-color: #665c54; color: #bdae93; }
-main .gsc-social-reaction-summary-item { background-color: #504945; border-color: #665c54; color: #bdae93; }
-main .gsc-social-reaction-summary-item.has-reacted { background-color: rgba(214, 93, 14, 0.15); border-color: #d65d0e; color: #d65d0e; }
-main .gsc-header { border-bottom-color: #504945; }
-main .gsc-header .BtnGroup-item { background-color: #504945; border-color: #665c54; color: #bdae93; }
-main .gsc-header .BtnGroup-item[aria-selected="true"] { background-color: #665c54; color: #d5c4a1; }
-main a { color: #d65d0e; }
-main a:hover { color: #d79921; }
-main .gsc-login-button { background-color: #504945; border-color: #665c54; color: #d5c4a1; }
-main .gsc-loading-image { filter: invert(1); }
+
+/* === Base Text Color === */
+main,
+main .gsc-main,
+main p,
+main span,
+main div,
+main li,
+main strong,
+main em {
+  color: #d5c4a1;
+}
+
+/* === Muted Text (timestamps, metadata) === */
+main .gsc-comment-author-avatar + div > a:not(:first-child),
+main .gsc-comment-header > div > span,
+main .gsc-comment-header .Link--secondary,
+main .gsc-reply-author-avatar + div > a:not(:first-child),
+main .color-fg-muted,
+main .text-sm,
+main .f6,
+main time,
+main relative-time {
+  color: #928374 !important;
+}
+
+/* === Author Name (PRIMARY color) === */
+main .gsc-comment-author > a,
+main .gsc-comment-header > div > a:first-child,
+main a.author,
+main .author {
+  color: #d65d0e !important;
+}
+
+main .gsc-comment-author > a:hover,
+main .gsc-comment-header > div > a:first-child:hover,
+main a.author:hover {
+  color: #d79921 !important;
+}
+
+/* === Owner/Label Badge === */
+main .Label,
+main .gsc-comment-header .Label {
+  color: #a89984 !important;
+  border-color: #504945 !important;
+  background-color: transparent !important;
+}
+
+/* === Comment Content === */
+main .gsc-comment-content,
+main .gsc-comment-content p,
+main .gsc-comment-content li,
+main .gsc-comment-content ul,
+main .gsc-comment-content ol {
+  color: #d5c4a1;
+}
+
+main .gsc-comment-content h1,
+main .gsc-comment-content h2,
+main .gsc-comment-content h3,
+main .gsc-comment-content h4,
+main .gsc-comment-content h5,
+main .gsc-comment-content h6 {
+  color: #d5c4a1;
+}
+
+main .gsc-comment-content a {
+  color: #d65d0e;
+}
+
+main .gsc-comment-content a:hover {
+  color: #d79921;
+}
+
+main .gsc-comment-content pre {
+  background-color: #282828;
+  border-color: #504945;
+}
+
+main .gsc-comment-content code {
+  background-color: #3c3836;
+  color: #d5c4a1;
+}
+
+main .gsc-comment-content blockquote {
+  border-left-color: #d65d0e;
+  color: #a89984;
+}
+
+/* === Comment Box === */
+main .gsc-comment-box {
+  background-color: #3c3836;
+  border-color: #504945;
+  border-radius: 8px;
+}
+
+main .gsc-comment-box-tabs {
+  background-color: #504945;
+  border-color: #504945;
+}
+
+main .gsc-comment-box-textarea {
+  background-color: #32302f;
+  border-color: #504945;
+  color: #d5c4a1;
+}
+
+main .gsc-comment-box-textarea::placeholder {
+  color: #928374;
+}
+
+main .gsc-comment-box-textarea:focus {
+  border-color: #d65d0e;
+  box-shadow: 0 0 0 2px rgba(214, 93, 14, 0.15);
+}
+
+main .gsc-comment-box-bottom {
+  background-color: #3c3836;
+  border-color: #504945;
+}
+
+/* === Comments === */
+main .gsc-comment {
+  background-color: transparent;
+  border-color: #504945;
+}
+
+/* === Reactions === */
+main .gsc-reactions {
+  background-color: transparent;
+}
+
+main .gsc-reactions-button {
+  background-color: #504945;
+  border-color: #665c54;
+  color: #bdae93;
+}
+
+main .gsc-reactions-button:hover {
+  background-color: #665c54;
+}
+
+main .gsc-social-reaction-summary-item {
+  background-color: #504945;
+  border-color: #665c54;
+  color: #bdae93;
+}
+
+main .gsc-social-reaction-summary-item:hover {
+  background-color: #665c54;
+}
+
+main .gsc-social-reaction-summary-item.has-reacted {
+  background-color: rgba(214, 93, 14, 0.15);
+  border-color: #d65d0e;
+  color: #d65d0e;
+}
+
+main .gsc-reactions-popover {
+  background-color: #3c3836;
+  border-color: #504945;
+}
+
+/* === Reply === */
+main .gsc-reply-box {
+  background-color: #3c3836;
+  border-color: #504945;
+}
+
+main .gsc-replies-count,
+main .gsc-comment-replies-count {
+  color: #928374;
+}
+
+/* === Header === */
+main .gsc-header {
+  border-bottom-color: #504945;
+}
+
+main .gsc-header .gsc-left-header em {
+  color: #928374;
+}
+
+main .gsc-header .gsc-left-header a {
+  color: #d5c4a1;
+}
+
+main .gsc-header .gsc-left-header a:hover {
+  color: #d65d0e;
+}
+
+main .gsc-header .BtnGroup-item {
+  background-color: #504945;
+  border-color: #665c54;
+  color: #bdae93;
+}
+
+main .gsc-header .BtnGroup-item:hover {
+  background-color: #665c54;
+}
+
+main .gsc-header .BtnGroup-item[aria-selected="true"] {
+  background-color: #665c54;
+  color: #d5c4a1;
+}
+
+/* === Timeline === */
+main .gsc-timeline {
+  border-left-color: #504945;
+}
+
+/* === Login Button === */
+main .gsc-login-button {
+  background-color: #504945;
+  border-color: #665c54;
+  color: #d5c4a1;
+}
+
+main .gsc-login-button:hover {
+  background-color: #665c54;
+}
+
+/* === Loading === */
+main .gsc-loading-image {
+  filter: invert(1);
+}

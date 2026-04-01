@@ -1,4 +1,6 @@
 /*! Giscus Theme: Gruvbox Soft Light - Seamless Integration */
+
+/* === CSS Variables === */
 main {
   --color-canvas-default: #f2e5bc;
   --color-canvas-overlay: #f2e5bc;
@@ -14,24 +16,232 @@ main {
   --color-fg-subtle: #928374;
   color-scheme: light;
 }
-main, main .gsc-main { color: #504945; }
-main p, main span, main div, main li, main h1, main h2, main h3, main em, main strong, main label { color: inherit; }
-main .gsc-comment-box { background-color: #ebdbb2; border-color: #bdae93; border-radius: 8px; }
-main .gsc-comment-box-tabs { background-color: #d5c4a1; border-color: #bdae93; color: #504945; }
-main .gsc-comment-box-textarea { background-color: #f2e5bc; border-color: #bdae93; color: #504945; }
-main .gsc-comment-box-textarea:focus { border-color: #af3a03; box-shadow: 0 0 0 2px rgba(175, 58, 3, 0.15); }
-main .gsc-comment { background-color: transparent; border-color: #bdae93; }
-main .gsc-comment-content, main .gsc-comment-content p, main .gsc-comment-content li { color: #504945; }
-main .gsc-comment-author, main .gsc-comment-author a, main a.gsc-comment-author-link { color: #af3a03; }
-main .gsc-comment-author a:hover, main a.gsc-comment-author-link:hover { color: #9d0006; }
-main .gsc-reactions { background-color: transparent; }
-main .gsc-reactions-button { background-color: #d5c4a1; border-color: #bdae93; color: #665c54; }
-main .gsc-social-reaction-summary-item { background-color: #d5c4a1; border-color: #bdae93; color: #665c54; }
-main .gsc-social-reaction-summary-item.has-reacted { background-color: rgba(175, 58, 3, 0.12); border-color: #af3a03; color: #af3a03; }
-main .gsc-header { border-bottom-color: #bdae93; color: #504945; }
-main .gsc-header .BtnGroup-item { background-color: #d5c4a1; border-color: #bdae93; color: #665c54; }
-main .gsc-header .BtnGroup-item[aria-selected="true"] { background-color: #bdae93; color: #504945; }
-main a { color: #af3a03; }
-main a:hover { color: #9d0006; }
-main .gsc-login-button { background-color: #d5c4a1; border-color: #bdae93; color: #504945; }
-main .gsc-loading-image { filter: invert(0); }
+
+/* === Base Text Color === */
+main,
+main .gsc-main,
+main p,
+main span,
+main div,
+main li,
+main strong,
+main em {
+  color: #504945;
+}
+
+/* === Muted Text (timestamps, metadata) === */
+main .gsc-comment-author-avatar + div > a:not(:first-child),
+main .gsc-comment-header > div > span,
+main .gsc-comment-header .Link--secondary,
+main .gsc-reply-author-avatar + div > a:not(:first-child),
+main .color-fg-muted,
+main .text-sm,
+main .f6,
+main time,
+main relative-time {
+  color: #928374 !important;
+}
+
+/* === Author Name (PRIMARY color) === */
+main .gsc-comment-author > a,
+main .gsc-comment-header > div > a:first-child,
+main a.author,
+main .author {
+  color: #af3a03 !important;
+}
+
+main .gsc-comment-author > a:hover,
+main .gsc-comment-header > div > a:first-child:hover,
+main a.author:hover {
+  color: #9d0006 !important;
+}
+
+/* === Owner/Label Badge === */
+main .Label,
+main .gsc-comment-header .Label {
+  color: #7c6f64 !important;
+  border-color: #bdae93 !important;
+  background-color: transparent !important;
+}
+
+/* === Comment Content === */
+main .gsc-comment-content,
+main .gsc-comment-content p,
+main .gsc-comment-content li,
+main .gsc-comment-content ul,
+main .gsc-comment-content ol {
+  color: #504945;
+}
+
+main .gsc-comment-content h1,
+main .gsc-comment-content h2,
+main .gsc-comment-content h3,
+main .gsc-comment-content h4,
+main .gsc-comment-content h5,
+main .gsc-comment-content h6 {
+  color: #504945;
+}
+
+main .gsc-comment-content a {
+  color: #af3a03;
+}
+
+main .gsc-comment-content a:hover {
+  color: #9d0006;
+}
+
+main .gsc-comment-content pre {
+  background-color: #ebdbb2;
+  border-color: #bdae93;
+  color: #504945;
+}
+
+main .gsc-comment-content code {
+  background-color: #ebdbb2;
+  color: #79740e;
+}
+
+main .gsc-comment-content blockquote {
+  border-left-color: #af3a03;
+  color: #7c6f64;
+}
+
+/* === Comment Box === */
+main .gsc-comment-box {
+  background-color: #ebdbb2;
+  border-color: #bdae93;
+  border-radius: 8px;
+}
+
+main .gsc-comment-box-tabs {
+  background-color: #d5c4a1;
+  border-color: #bdae93;
+  color: #504945;
+}
+
+main .gsc-comment-box-textarea {
+  background-color: #f2e5bc;
+  border-color: #bdae93;
+  color: #504945;
+}
+
+main .gsc-comment-box-textarea::placeholder {
+  color: #928374;
+}
+
+main .gsc-comment-box-textarea:focus {
+  border-color: #af3a03;
+  box-shadow: 0 0 0 2px rgba(175, 58, 3, 0.15);
+}
+
+main .gsc-comment-box-bottom {
+  background-color: #ebdbb2;
+  border-color: #bdae93;
+}
+
+/* === Comments === */
+main .gsc-comment {
+  background-color: transparent;
+  border-color: #bdae93;
+}
+
+/* === Reactions === */
+main .gsc-reactions {
+  background-color: transparent;
+}
+
+main .gsc-reactions-button {
+  background-color: #d5c4a1;
+  border-color: #bdae93;
+  color: #665c54;
+}
+
+main .gsc-reactions-button:hover {
+  background-color: #bdae93;
+}
+
+main .gsc-social-reaction-summary-item {
+  background-color: #d5c4a1;
+  border-color: #bdae93;
+  color: #665c54;
+}
+
+main .gsc-social-reaction-summary-item:hover {
+  background-color: #bdae93;
+}
+
+main .gsc-social-reaction-summary-item.has-reacted {
+  background-color: rgba(175, 58, 3, 0.12);
+  border-color: #af3a03;
+  color: #af3a03;
+}
+
+main .gsc-reactions-popover {
+  background-color: #ebdbb2;
+  border-color: #bdae93;
+}
+
+/* === Reply === */
+main .gsc-reply-box {
+  background-color: #ebdbb2;
+  border-color: #bdae93;
+}
+
+main .gsc-replies-count,
+main .gsc-comment-replies-count {
+  color: #928374;
+}
+
+/* === Header === */
+main .gsc-header {
+  border-bottom-color: #bdae93;
+  color: #504945;
+}
+
+main .gsc-header .gsc-left-header em {
+  color: #928374;
+}
+
+main .gsc-header .gsc-left-header a {
+  color: #504945;
+}
+
+main .gsc-header .gsc-left-header a:hover {
+  color: #af3a03;
+}
+
+main .gsc-header .BtnGroup-item {
+  background-color: #d5c4a1;
+  border-color: #bdae93;
+  color: #665c54;
+}
+
+main .gsc-header .BtnGroup-item:hover {
+  background-color: #bdae93;
+}
+
+main .gsc-header .BtnGroup-item[aria-selected="true"] {
+  background-color: #bdae93;
+  color: #504945;
+}
+
+/* === Timeline === */
+main .gsc-timeline {
+  border-left-color: #bdae93;
+}
+
+/* === Login Button === */
+main .gsc-login-button {
+  background-color: #d5c4a1;
+  border-color: #bdae93;
+  color: #504945;
+}
+
+main .gsc-login-button:hover {
+  background-color: #bdae93;
+}
+
+/* === Loading === */
+main .gsc-loading-image {
+  filter: invert(0);
+}

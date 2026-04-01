@@ -1,4 +1,6 @@
 /*! Giscus Theme: Catppuccin Mocha (Dark) - Seamless Integration */
+
+/* === CSS Variables === */
 main {
   --color-canvas-default: #1e1e2e;
   --color-canvas-overlay: #1e1e2e;
@@ -10,25 +12,232 @@ main {
   --color-accent-emphasis: #cba6f7;
   --color-fg-default: #cdd6f4;
   --color-fg-muted: #a6adc8;
+  --color-fg-subtle: #9399b2;
   color-scheme: dark;
 }
-main, main .gsc-main { color: #cdd6f4; }
-main .gsc-comment-box { background-color: #313244; border-color: #45475a; border-radius: 8px; }
-main .gsc-comment-box-tabs { background-color: #45475a; border-color: #45475a; }
-main .gsc-comment-box-textarea { background-color: #1e1e2e; border-color: #45475a; color: #cdd6f4; }
-main .gsc-comment-box-textarea:focus { border-color: #cba6f7; box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.15); }
-main .gsc-comment { background-color: transparent; border-color: #45475a; }
-main .gsc-comment-content, main .gsc-comment-content p, main .gsc-comment-content li { color: #cdd6f4; }
-main .gsc-comment-author, main .gsc-comment-author a, main a.gsc-comment-author-link { color: #cba6f7; }
-main .gsc-comment-author a:hover, main a.gsc-comment-author-link:hover { color: #f5c2e7; }
-main .gsc-reactions { background-color: transparent; }
-main .gsc-reactions-button { background-color: #45475a; border-color: #585b70; color: #bac2de; }
-main .gsc-social-reaction-summary-item { background-color: #45475a; border-color: #585b70; color: #bac2de; }
-main .gsc-social-reaction-summary-item.has-reacted { background-color: rgba(203, 166, 247, 0.15); border-color: #cba6f7; color: #cba6f7; }
-main .gsc-header { border-bottom-color: #45475a; }
-main .gsc-header .BtnGroup-item { background-color: #45475a; border-color: #585b70; color: #bac2de; }
-main .gsc-header .BtnGroup-item[aria-selected="true"] { background-color: #585b70; color: #cdd6f4; }
-main a { color: #cba6f7; }
-main a:hover { color: #f5c2e7; }
-main .gsc-login-button { background-color: #45475a; border-color: #585b70; color: #cdd6f4; }
-main .gsc-loading-image { filter: invert(1); }
+
+/* === Base Text Color === */
+main,
+main .gsc-main,
+main p,
+main span,
+main div,
+main li,
+main strong,
+main em {
+  color: #cdd6f4;
+}
+
+/* === Muted Text (timestamps, metadata) === */
+main .gsc-comment-author-avatar + div > a:not(:first-child),
+main .gsc-comment-header > div > span,
+main .gsc-comment-header .Link--secondary,
+main .gsc-reply-author-avatar + div > a:not(:first-child),
+main .color-fg-muted,
+main .text-sm,
+main .f6,
+main time,
+main relative-time {
+  color: #9399b2 !important;
+}
+
+/* === Author Name (PRIMARY color) === */
+main .gsc-comment-author > a,
+main .gsc-comment-header > div > a:first-child,
+main a.author,
+main .author {
+  color: #cba6f7 !important;
+}
+
+main .gsc-comment-author > a:hover,
+main .gsc-comment-header > div > a:first-child:hover,
+main a.author:hover {
+  color: #f5c2e7 !important;
+}
+
+/* === Owner/Label Badge === */
+main .Label,
+main .gsc-comment-header .Label {
+  color: #a6adc8 !important;
+  border-color: #45475a !important;
+  background-color: transparent !important;
+}
+
+/* === Comment Content === */
+main .gsc-comment-content,
+main .gsc-comment-content p,
+main .gsc-comment-content li,
+main .gsc-comment-content ul,
+main .gsc-comment-content ol {
+  color: #cdd6f4;
+}
+
+main .gsc-comment-content h1,
+main .gsc-comment-content h2,
+main .gsc-comment-content h3,
+main .gsc-comment-content h4,
+main .gsc-comment-content h5,
+main .gsc-comment-content h6 {
+  color: #cdd6f4;
+}
+
+main .gsc-comment-content a {
+  color: #cba6f7;
+}
+
+main .gsc-comment-content a:hover {
+  color: #f5c2e7;
+}
+
+main .gsc-comment-content pre {
+  background-color: #181825;
+  border-color: #45475a;
+}
+
+main .gsc-comment-content code {
+  background-color: #313244;
+  color: #cdd6f4;
+}
+
+main .gsc-comment-content blockquote {
+  border-left-color: #cba6f7;
+  color: #a6adc8;
+}
+
+/* === Comment Box === */
+main .gsc-comment-box {
+  background-color: #313244;
+  border-color: #45475a;
+  border-radius: 8px;
+}
+
+main .gsc-comment-box-tabs {
+  background-color: #45475a;
+  border-color: #45475a;
+}
+
+main .gsc-comment-box-textarea {
+  background-color: #1e1e2e;
+  border-color: #45475a;
+  color: #cdd6f4;
+}
+
+main .gsc-comment-box-textarea::placeholder {
+  color: #9399b2;
+}
+
+main .gsc-comment-box-textarea:focus {
+  border-color: #cba6f7;
+  box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.15);
+}
+
+main .gsc-comment-box-bottom {
+  background-color: #313244;
+  border-color: #45475a;
+}
+
+/* === Comments === */
+main .gsc-comment {
+  background-color: transparent;
+  border-color: #45475a;
+}
+
+/* === Reactions === */
+main .gsc-reactions {
+  background-color: transparent;
+}
+
+main .gsc-reactions-button {
+  background-color: #45475a;
+  border-color: #585b70;
+  color: #bac2de;
+}
+
+main .gsc-reactions-button:hover {
+  background-color: #585b70;
+}
+
+main .gsc-social-reaction-summary-item {
+  background-color: #45475a;
+  border-color: #585b70;
+  color: #bac2de;
+}
+
+main .gsc-social-reaction-summary-item:hover {
+  background-color: #585b70;
+}
+
+main .gsc-social-reaction-summary-item.has-reacted {
+  background-color: rgba(203, 166, 247, 0.15);
+  border-color: #cba6f7;
+  color: #cba6f7;
+}
+
+main .gsc-reactions-popover {
+  background-color: #313244;
+  border-color: #45475a;
+}
+
+/* === Reply === */
+main .gsc-reply-box {
+  background-color: #313244;
+  border-color: #45475a;
+}
+
+main .gsc-replies-count,
+main .gsc-comment-replies-count {
+  color: #9399b2;
+}
+
+/* === Header === */
+main .gsc-header {
+  border-bottom-color: #45475a;
+}
+
+main .gsc-header .gsc-left-header em {
+  color: #9399b2;
+}
+
+main .gsc-header .gsc-left-header a {
+  color: #cdd6f4;
+}
+
+main .gsc-header .gsc-left-header a:hover {
+  color: #cba6f7;
+}
+
+main .gsc-header .BtnGroup-item {
+  background-color: #45475a;
+  border-color: #585b70;
+  color: #bac2de;
+}
+
+main .gsc-header .BtnGroup-item:hover {
+  background-color: #585b70;
+}
+
+main .gsc-header .BtnGroup-item[aria-selected="true"] {
+  background-color: #585b70;
+  color: #cdd6f4;
+}
+
+/* === Timeline === */
+main .gsc-timeline {
+  border-left-color: #45475a;
+}
+
+/* === Login Button === */
+main .gsc-login-button {
+  background-color: #45475a;
+  border-color: #585b70;
+  color: #cdd6f4;
+}
+
+main .gsc-login-button:hover {
+  background-color: #585b70;
+}
+
+/* === Loading === */
+main .gsc-loading-image {
+  filter: invert(1);
+}
