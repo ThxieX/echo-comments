@@ -148,8 +148,15 @@ main .gsc-comment-content h3 {
   color: #3c3836;
 }
 
-main .gsc-comment-author {
-  color: #504945;
+main .gsc-comment-author,
+main .gsc-comment-author a,
+main a.gsc-comment-author-link {
+  color: #d65d0e;
+}
+
+main .gsc-comment-author a:hover,
+main a.gsc-comment-author-link:hover {
+  color: #af3a03;
 }
 
 main .gsc-comment-author-avatar {

@@ -1,127 +1,34 @@
-/*! Giscus Theme: Catppuccin Mocha (Dark) */
+/*! Giscus Theme: Catppuccin Mocha (Dark) - Seamless Integration */
 main {
   --color-canvas-default: #1e1e2e;
-  --color-canvas-overlay: #313244;
-  --color-canvas-inset: #181825;
-  --color-canvas-subtle: #45475a;
+  --color-canvas-overlay: #1e1e2e;
+  --color-canvas-inset: #1e1e2e;
+  --color-canvas-subtle: #313244;
   --color-border-default: #45475a;
   --color-border-muted: #313244;
-  --color-neutral-muted: rgba(205, 214, 244, 0.1);
   --color-accent-fg: #cba6f7;
   --color-accent-emphasis: #cba6f7;
-  --color-accent-muted: rgba(203, 166, 247, 0.4);
-  --color-accent-subtle: rgba(203, 166, 247, 0.1);
-  --color-success-fg: #a6e3a1;
-  --color-attention-fg: #f9e2af;
-  --color-attention-muted: rgba(249, 226, 175, 0.4);
-  --color-attention-subtle: rgba(249, 226, 175, 0.1);
-  --color-danger-fg: #f38ba8;
-  --color-danger-muted: rgba(243, 139, 168, 0.4);
-  --color-danger-subtle: rgba(243, 139, 168, 0.1);
-  --color-primer-fg-disabled: #6c7086;
-  --color-scale-gray-1: #181825;
-  --color-scale-gray-2: #1e1e2e;
-  --color-scale-gray-3: #313244;
-  --color-scale-gray-4: #45475a;
-  --color-scale-gray-5: #585b70;
-  --color-scale-gray-6: #6c7086;
-  --color-scale-gray-7: #7f849c;
-  --color-scale-gray-8: #9399b2;
-  --color-scale-gray-9: #a6adc8;
-  --color-scale-blue-1: rgba(137, 180, 250, 0.1);
-  --color-scale-blue-2: rgba(137, 180, 250, 0.2);
-  --color-scale-blue-3: rgba(137, 180, 250, 0.3);
-  --color-scale-blue-4: rgba(137, 180, 250, 0.4);
-  --color-scale-blue-5: #89b4fa;
-  --color-scale-blue-6: #74c7ec;
+  --color-fg-default: #cdd6f4;
+  --color-fg-muted: #a6adc8;
   color-scheme: dark;
 }
-
-main .gsc-comment-box {
-  background-color: #313244;
-  border-color: #45475a;
-}
-
-main .gsc-comment-box-textarea {
-  background-color: #1e1e2e;
-  border-color: #45475a;
-  color: #cdd6f4;
-}
-
-main .gsc-comment-box-textarea:focus {
-  border-color: #cba6f7;
-  box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.2);
-}
-
-main .gsc-comment {
-  background-color: #313244;
-  border-color: #45475a;
-}
-
-main .gsc-comment-content {
-  color: #cdd6f4;
-}
-
-main .gsc-comment-author {
-  color: #bac2de;
-}
-
-main .gsc-comment-author-avatar {
-  border-color: #45475a;
-}
-
-main .gsc-reactions-button {
-  background-color: #45475a;
-  border-color: #585b70;
-  color: #bac2de;
-}
-
-main .gsc-reactions-button:hover {
-  background-color: #585b70;
-  border-color: #6c7086;
-}
-
-main .gsc-reply-box {
-  background-color: #313244;
-  border-color: #45475a;
-}
-
-main .gsc-social-reaction-summary-item {
-  background-color: #45475a;
-  border-color: #585b70;
-  color: #bac2de;
-}
-
-main .gsc-social-reaction-summary-item:hover {
-  background-color: #585b70;
-}
-
-main .gsc-social-reaction-summary-item.has-reacted {
-  background-color: rgba(203, 166, 247, 0.2);
-  border-color: #cba6f7;
-  color: #cba6f7;
-}
-
-main .gsc-header {
-  border-bottom-color: #45475a;
-}
-
-main .gsc-header .gsc-left-header em {
-  color: #7f849c;
-}
-
-main .gsc-timeline {
-  border-left-color: #45475a;
-}
-
-main a {
-  color: #cba6f7;
-}
-
-main a:hover {
-  color: #f5c2e7;
-}
-
-main .gsc-loading-image {
-  filter: invert(1);
-}
+main, main .gsc-main { color: #cdd6f4; }
+main .gsc-comment-box { background-color: #313244; border-color: #45475a; border-radius: 8px; }
+main .gsc-comment-box-tabs { background-color: #45475a; border-color: #45475a; }
+main .gsc-comment-box-textarea { background-color: #1e1e2e; border-color: #45475a; color: #cdd6f4; }
+main .gsc-comment-box-textarea:focus { border-color: #cba6f7; box-shadow: 0 0 0 2px rgba(203, 166, 247, 0.15); }
+main .gsc-comment { background-color: transparent; border-color: #45475a; }
+main .gsc-comment-content, main .gsc-comment-content p, main .gsc-comment-content li { color: #cdd6f4; }
+main .gsc-comment-author, main .gsc-comment-author a, main a.gsc-comment-author-link { color: #cba6f7; }
+main .gsc-comment-author a:hover, main a.gsc-comment-author-link:hover { color: #f5c2e7; }
+main .gsc-reactions { background-color: transparent; }
+main .gsc-reactions-button { background-color: #45475a; border-color: #585b70; color: #bac2de; }
+main .gsc-social-reaction-summary-item { background-color: #45475a; border-color: #585b70; color: #bac2de; }
+main .gsc-social-reaction-summary-item.has-reacted { background-color: rgba(203, 166, 247, 0.15); border-color: #cba6f7; color: #cba6f7; }
+main .gsc-header { border-bottom-color: #45475a; }
+main .gsc-header .BtnGroup-item { background-color: #45475a; border-color: #585b70; color: #bac2de; }
+main .gsc-header .BtnGroup-item[aria-selected="true"] { background-color: #585b70; color: #cdd6f4; }
+main a { color: #cba6f7; }
+main a:hover { color: #f5c2e7; }
+main .gsc-login-button { background-color: #45475a; border-color: #585b70; color: #cdd6f4; }
+main .gsc-loading-image { filter: invert(1); }

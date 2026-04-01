@@ -1,127 +1,35 @@
-/*! Giscus Theme: Gruvbox High Contrast Light */
+/*! Giscus Theme: Gruvbox High Contrast Light - Seamless Integration */
 main {
   --color-canvas-default: #f9f5d7;
-  --color-canvas-overlay: #fbf1c7;
-  --color-canvas-inset: #ebdbb2;
-  --color-canvas-subtle: #ebdbb2;
+  --color-canvas-overlay: #f9f5d7;
+  --color-canvas-inset: #f9f5d7;
+  --color-canvas-subtle: #fbf1c7;
   --color-border-default: #bdae93;
   --color-border-muted: #d5c4a1;
-  --color-neutral-muted: rgba(29, 32, 33, 0.1);
   --color-accent-fg: #9d0006;
   --color-accent-emphasis: #9d0006;
-  --color-accent-muted: rgba(157, 0, 6, 0.4);
-  --color-accent-subtle: rgba(157, 0, 6, 0.1);
-  --color-success-fg: #79740e;
-  --color-attention-fg: #b57614;
-  --color-attention-muted: rgba(181, 118, 20, 0.4);
-  --color-attention-subtle: rgba(181, 118, 20, 0.1);
-  --color-danger-fg: #9d0006;
-  --color-danger-muted: rgba(157, 0, 6, 0.4);
-  --color-danger-subtle: rgba(157, 0, 6, 0.1);
-  --color-primer-fg-disabled: #7c6f64;
-  --color-scale-gray-1: #fbf1c7;
-  --color-scale-gray-2: #f9f5d7;
-  --color-scale-gray-3: #ebdbb2;
-  --color-scale-gray-4: #d5c4a1;
-  --color-scale-gray-5: #bdae93;
-  --color-scale-gray-6: #a89984;
-  --color-scale-gray-7: #665c54;
-  --color-scale-gray-8: #504945;
-  --color-scale-gray-9: #3c3836;
-  --color-scale-blue-1: rgba(7, 102, 120, 0.1);
-  --color-scale-blue-2: rgba(7, 102, 120, 0.2);
-  --color-scale-blue-3: rgba(7, 102, 120, 0.3);
-  --color-scale-blue-4: rgba(7, 102, 120, 0.4);
-  --color-scale-blue-5: #076678;
-  --color-scale-blue-6: #458588;
+  --color-fg-default: #1d2021;
+  --color-fg-muted: #504945;
   color-scheme: light;
 }
-
-main .gsc-comment-box {
-  background-color: #fbf1c7;
-  border-color: #bdae93;
-}
-
-main .gsc-comment-box-textarea {
-  background-color: #f9f5d7;
-  border-color: #bdae93;
-  color: #1d2021;
-}
-
-main .gsc-comment-box-textarea:focus {
-  border-color: #9d0006;
-  box-shadow: 0 0 0 2px rgba(157, 0, 6, 0.2);
-}
-
-main .gsc-comment {
-  background-color: #fbf1c7;
-  border-color: #bdae93;
-}
-
-main .gsc-comment-content {
-  color: #1d2021;
-}
-
-main .gsc-comment-author {
-  color: #3c3836;
-}
-
-main .gsc-comment-author-avatar {
-  border-color: #bdae93;
-}
-
-main .gsc-reactions-button {
-  background-color: #ebdbb2;
-  border-color: #bdae93;
-  color: #3c3836;
-}
-
-main .gsc-reactions-button:hover {
-  background-color: #d5c4a1;
-  border-color: #a89984;
-}
-
-main .gsc-reply-box {
-  background-color: #fbf1c7;
-  border-color: #bdae93;
-}
-
-main .gsc-social-reaction-summary-item {
-  background-color: #ebdbb2;
-  border-color: #bdae93;
-  color: #3c3836;
-}
-
-main .gsc-social-reaction-summary-item:hover {
-  background-color: #d5c4a1;
-}
-
-main .gsc-social-reaction-summary-item.has-reacted {
-  background-color: rgba(157, 0, 6, 0.15);
-  border-color: #9d0006;
-  color: #9d0006;
-}
-
-main .gsc-header {
-  border-bottom-color: #bdae93;
-}
-
-main .gsc-header .gsc-left-header em {
-  color: #665c54;
-}
-
-main .gsc-timeline {
-  border-left-color: #bdae93;
-}
-
-main a {
-  color: #9d0006;
-}
-
-main a:hover {
-  color: #cc241d;
-}
-
-main .gsc-loading-image {
-  filter: invert(0);
-}
+main, main .gsc-main { color: #1d2021; }
+main p, main span, main div, main li, main h1, main h2, main h3, main em, main strong, main label { color: inherit; }
+main .gsc-comment-box { background-color: #fbf1c7; border-color: #bdae93; border-radius: 8px; }
+main .gsc-comment-box-tabs { background-color: #ebdbb2; border-color: #bdae93; color: #1d2021; }
+main .gsc-comment-box-textarea { background-color: #f9f5d7; border-color: #bdae93; color: #1d2021; }
+main .gsc-comment-box-textarea:focus { border-color: #9d0006; box-shadow: 0 0 0 2px rgba(157, 0, 6, 0.15); }
+main .gsc-comment { background-color: transparent; border-color: #bdae93; }
+main .gsc-comment-content, main .gsc-comment-content p, main .gsc-comment-content li { color: #1d2021; }
+main .gsc-comment-author, main .gsc-comment-author a, main a.gsc-comment-author-link { color: #9d0006; }
+main .gsc-comment-author a:hover, main a.gsc-comment-author-link:hover { color: #cc241d; }
+main .gsc-reactions { background-color: transparent; }
+main .gsc-reactions-button { background-color: #ebdbb2; border-color: #bdae93; color: #3c3836; }
+main .gsc-social-reaction-summary-item { background-color: #ebdbb2; border-color: #bdae93; color: #3c3836; }
+main .gsc-social-reaction-summary-item.has-reacted { background-color: rgba(157, 0, 6, 0.12); border-color: #9d0006; color: #9d0006; }
+main .gsc-header { border-bottom-color: #bdae93; color: #1d2021; }
+main .gsc-header .BtnGroup-item { background-color: #ebdbb2; border-color: #bdae93; color: #3c3836; }
+main .gsc-header .BtnGroup-item[aria-selected="true"] { background-color: #d5c4a1; color: #1d2021; }
+main a { color: #9d0006; }
+main a:hover { color: #cc241d; }
+main .gsc-login-button { background-color: #ebdbb2; border-color: #bdae93; color: #1d2021; }
+main .gsc-loading-image { filter: invert(0); }
