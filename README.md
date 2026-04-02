@@ -14,7 +14,7 @@ Powered by **Giscus** and **GitHub Discussions**.
 - **Experience**: Markdown-native, developer-friendly, and zero-tracker environment.
 
 ## ⚙️ Configuration
-- **Target Site**: [thxie.io](https://thxie.io)
+- **Target Site**: [thxie.com](https://thxie.com)
 - **Engine**: [Giscus](https://giscus.app)
 - **Mapping**: `pathname`
 - **Theme**: Gruvbox-first multi-theme
